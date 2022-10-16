@@ -12,6 +12,36 @@ code {
     monospace;
 }
 
+.note.new{
+  background-color: #67d7cc;
+  border-radius: 10;
+}
+
+textarea{
+  border: none;
+  background-color: #67d7cc;
+  resize: none;
+  padding: 10px;
+}
+
+textarea:focus{
+  outline: none;
+}
+
+.save{
+  padding: 10px;
+  background-color: gray;
+  border: none;
+  color: white;
+  border-radius: 15px;
+}
+
+.save:hover{
+  background-color: lightgray;
+  cursor: pointer;
+  color: black;
+}
+
 .app{
     max-width: 960px;
     margin-right: auto;

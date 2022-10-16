@@ -1,13 +1,16 @@
 import React from 'react'
+import AddNotes from './AddNotes'
 import Note from './Note'
 
-function NotesLists() {
+function NotesLists({data, handleAddNote}) {
   return (
     <div className='notes-list'>
-        <Note/>
-        <Note/>
-        <Note/>
-        <Note/>
+       {
+        data?.map((note)=>(
+        <Note key={note.id} noteText={note.text} noteDate={note.date}/>
+       ))
+       }
+       <AddNotes handleAddNote={handleAddNote}/>
     </div>
   )
 }
