@@ -4,7 +4,9 @@ function AddNotes({handleAddNote}) {
 const [newNote, setNewNote] = useState("");
 
 const handleClick = () =>{
-    handleAddNote(newNote);
+    if(newNote.trim.length > 0)
+        handleAddNote(newNote);
+    setNewNote("");
 }
   return (
     <div className='note new'>

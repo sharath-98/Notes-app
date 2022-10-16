@@ -21,8 +21,15 @@ function App() {
   ]);
 
   const addNote = (text) =>{
-    console.log(text)
+    const date = new Date();
+    const newTask = {
+      id:nanoid(),
+      date:date.toLocaleDateString(),
+      text:text
+    }
+    setNotes([...notes, newTask]);
   }
+
   return (
     <div className="app">
       Notes
