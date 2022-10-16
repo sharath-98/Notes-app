@@ -30,10 +30,14 @@ function App() {
     setNotes([...notes, newTask]);
   }
 
+  const deleteNote = (id) =>{
+    setNotes(notes.filter((note)=>note.id != id));
+  }
+
   return (
     <div className="app">
       Notes
-      <NotesLists handleAddNote = {addNote} data = {notes}/>
+      <NotesLists handleDelete = {deleteNote} handleAddNote = {addNote} data = {notes}/>
     </div>
   );
 }
