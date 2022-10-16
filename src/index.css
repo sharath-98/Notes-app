@@ -60,7 +60,7 @@ textarea:focus{
     background-color: #fef68a;
     padding: 1rem;
     min-height: 170px;
-    border-radius: 10;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between ;
@@ -76,4 +76,22 @@ textarea:focus{
 .delete-icon:hover{
   cursor: pointer;
   color: red;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+  background-color: rgb(233, 233, 233);
+}
+
+.search input{
+  border: none;
+  background-color: rgb(233, 233, 233);
+}
+
+.search input:focus{
+  outline: none;
 }
