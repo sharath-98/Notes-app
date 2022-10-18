@@ -3,6 +3,7 @@ import './App.css';
 import NotesLists from './components/NotesLists';
 import {nanoid} from 'nanoid'
 import Search from './components/Search';
+import Header from './components/Header';
 
 function App() {
   const [notes, setNotes] = useState([
@@ -38,7 +39,7 @@ function App() {
   const [searchVal, setSearchVal] = useState("");
   return (
     <div className="app">
-      Notes
+      <Header/>
       <Search handleSearch = {setSearchVal}/>
       <NotesLists handleDelete = {deleteNote} handleAddNote = {addNote} data = {notes.filter((note)=>
       note.text.toLowerCase().includes(searchVal))}/>
