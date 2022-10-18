@@ -35,11 +35,13 @@ function App() {
     setNotes(notes.filter((note)=>note.id != id));
   }
 
+  const [searchVal, setSearchVal] = useState("");
   return (
     <div className="app">
       Notes
-      <Search/>
-      <NotesLists handleDelete = {deleteNote} handleAddNote = {addNote} data = {notes}/>
+      <Search handleSearch = {setSearchVal}/>
+      <NotesLists handleDelete = {deleteNote} handleAddNote = {addNote} data = {notes.filter((note)=>
+      note.text.toLowerCase().includes(searchVal))}/>
     </div>
   );
 }

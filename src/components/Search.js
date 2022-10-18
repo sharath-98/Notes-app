@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MdSearch } from 'react-icons/md'
 
-function Search() {
+function Search({handleSearch}) {
   return (
     <div className='search'>
         <MdSearch className='search-area' size={'1.3em'}/>
-        <input type="text" placeholder="Search..."/>
+        <input onChange={(e)=>handleSearch(e.target.value)} type="text" placeholder="Search..."/>
     </div>
   )
 }
