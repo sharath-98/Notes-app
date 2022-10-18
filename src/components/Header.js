@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Header() {
+function Header({handleMode}) {
   return (
     <div className='header'>
     <h1>Notes</h1>
-    <button className='save'>Toggle Theme</button>
+    <button className='save' onClick={()=>handleMode((prevMode)=>!prevMode)}>Toggle Theme</button>
     </div>
   )
 }

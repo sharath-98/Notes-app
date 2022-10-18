@@ -37,9 +37,10 @@ function App() {
   }
 
   const [searchVal, setSearchVal] = useState("");
+  const [darkTheme, setDarkTheme] = useState(false);
   return (
-    <div className="app">
-      <Header/>
+    <div className={`app ${darkTheme && 'dark-mode'}`}>
+      <Header handleMode = {setDarkTheme}/>
       <Search handleSearch = {setSearchVal}/>
       <NotesLists handleDelete = {deleteNote} handleAddNote = {addNote} data = {notes.filter((note)=>
       note.text.toLowerCase().includes(searchVal))}/>
