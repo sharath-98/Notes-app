@@ -1,3 +1,7 @@
+body{
+  margin: 0;
+}
+
 .note.new{
   background-color: #67d7cc;
   border-radius: 10;
@@ -36,13 +40,6 @@ textarea:focus{
   color: black;
 }
 
-.app{
-    display: flex;
-    flex-direction: column;
-    padding-right: 15px;
-    padding-left: 15px;
-    height: 100vh;
-}
 
 .notes-list{
     display: grid;
